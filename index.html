@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        font-size: 26px;
+        padding: 5px 10px;
+        background-color: blanchedalmond;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+
+    <button id="btn">click</button>
+    <ul id="ulList">
+
+
+    </ul>
+
+
+    <script>
+
+
+        const months = ["January", "February", "March", "April", "May", "June", "July"];
+
+        let ulList = document.getElementById("ulList")
+        let btn = document.getElementById("btn")
+
+        btn.addEventListener("click", funName)
+        function funName() {
+            let li = document.createElement("p")
+            ulList.appendChild(li)
+            const random = Math.floor(Math.random() * months.length);
+
+            li.innerHTML = months[random];
+
+           // console.log(months[random]);
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
